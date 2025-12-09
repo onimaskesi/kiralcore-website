@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KIRALCORE - İşletmenizi AI ile Dönüştürün">
+    <title>KIRALCORE - AI Otomasyon Çözümleri</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066FF',
+                        secondary: '#00F5FF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white">
+<div id="page-wrapper">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-xl z-50 border-b border-cyan-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="KIRALCORE" class="h-12 w-auto">
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-cyan-400">Ana Sayfa</a>
+                    <a href="#solutions" class="text-gray-300 hover:text-cyan-400">Çözümler</a>
+                    <a href="#about" class="text-gray-300 hover:text-cyan-400">Hakkımda</a>
+                    <a href="#contact" class="text-gray-300 hover:text-cyan-400">İletişim</a>
+                    <a href="https://linkedin.com/in/erdem-onat-kıral-501442142/" target="_blank" 
+                       class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50">
+                        İletişime Geç
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/10">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-300 hover:text-cyan-400 py-2">Ana Sayfa</a>
+                <a href="#solutions" class="block text-gray-300 hover:text-cyan-400 py-2">Çözümler</a>
+                <a href="#about" class="block text-gray-300 hover:text-cyan-400 py-2">Hakkımda</a>
+                <a href="#contact" class="block text-gray-300 hover:text-cyan-400 py-2">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20">
+        <canvas class="particle-canvas" id="hero-canvas"></canvas>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                        İşletmenizi AI ile
+                        <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-glow">
+                            Dönüştürün
+                        </span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        Yapay zeka destekli otomasyon çözümleriyle operasyonel verimliliğinizi artırın.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" 
+                           class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 text-center">
+                            Ücretsiz Danışmanlık Al
+                        </a>
+                        <a href="#solutions" 
+                           class="glass-card text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 text-center">
+                            Çözümlerimizi İncele
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-6 pt-8">
+                        <div class="text-center p-4 glass-card rounded-xl">
+                            <div class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">4+</div>
+                            <div class="text-sm text-gray-400 mt-1">Yıl Deneyim</div>
+                        </div>
+                        <div class="text-center p-4 glass-card rounded-xl">
+                            <div class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">80%</div>
+                            <div class="text-sm text-gray-400 mt-1">Verimlilik</div>
+                        </div>
+                        <div class="text-center p-4 glass-card rounded-xl">
+                            <div class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">24/7</div>
+                            <div class="text-sm text-gray-400 mt-1">AI Sistemler</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative z-10 bg-white rounded-3xl p-8 shadow-2xl">
+                        <img src="logo.png" alt="KIRALCORE" class="w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="relative py-20">
+        <canvas class="particle-canvas" id="solutions-canvas"></canvas>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    AI Otomasyon
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                        Çözümleri
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-400">
+                    İşletmenize özel, ölçeklenebilir AI sistemleri
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl hover:scale-105 transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="phone-call" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Voice Agent</h3>
+                    <p class="text-gray-400 mb-6">
+                        7/24 müşteri aramalarını yanıtlayan sesli AI asistan.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl hover:scale-105 transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">İK Otomasyonu</h3>
+                    <p class="text-gray-400 mb-6">
+                        AI ile otomatik aday değerlendirme ve işe alım.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl hover:scale-105 transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="calendar-check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Akıllı Randevu</h3>
+                    <p class="text-gray-400 mb-6">
+                        Otomatik randevu yönetimi ve CRM entegrasyonu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-20">
+        <canvas class="particle-canvas" id="about-canvas"></canvas>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    Neden <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">KIRALCORE?</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="w-14 h-14 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="code" class="w-7 h-7 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">4+ Yıl Uzmanlık</h3>
+                    <p class="text-gray-400">
+                        React Native, AI entegrasyonları ve otomasyon sistemlerinde derin deneyim.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="w-14 h-14 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="trophy" class="w-7 h-7 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kanıtlanmış Başarı</h3>
+                    <p class="text-gray-400">
+                        23 dilde AI uygulamalar ve enterprise-level entegrasyonlar.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="w-14 h-14 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="target" class="w-7 h-7 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Özel Çözümler</h3>
+                    <p class="text-gray-400">
+                        İşletmenize özel tasarlanmış ölçeklenebilir sistemler.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-20">
+        <canvas class="particle-canvas" id="contact-canvas"></canvas>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                İşletmenizi Dijital 
+                <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-glow">
+                    Geleceğe Taşıyın
+                </span>
+            </h2>
+            
+            <p class="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                30 dakikalık ücretsiz danışmanlıkta ihtiyaçlarınızı analiz edelim.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://linkedin.com/in/erdem-onat-kıral-501442142/" target="_blank"
+                   class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/50">
+                    Hemen İletişime Geç
+                </a>
+                <a href="mailto:info@kiralcore.com"
+                   class="glass-card text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10">
+                    E-posta Gönder
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-gray-900/50 backdrop-blur-xl border-t border-cyan-500/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2025 KIRALCORE. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

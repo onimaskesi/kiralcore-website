@@ -1,0 +1,221 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #050A1E !important;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, #050A1E, #0A0E27, #050A1E) !important;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overscroll-behavior: none;
+}
+
+/* Page Wrapper - Extra dark background protection */
+#page-wrapper {
+    background: #050A1E;
+    min-height: 100vh;
+}
+
+/* Particle Canvas */
+.particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Glass Card Effects */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 245, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+}
+
+/* Custom Scrollbar - Dark Theme */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050A1E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00F5FF, #0066FF);
+    border-radius: 6px;
+    border: 2px solid #050A1E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00F5FF, #0052cc);
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+/* Section Positioning */
+section {
+    position: relative;
+    z-index: 10;
+}
+
+/* Custom Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 245, 255, 0.6);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out;
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+/* Backdrop Blur for Navigation */
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-xl {
+    backdrop-filter: blur(20px);
+}
+
+/* Gradient Text */
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Button Effects */
+.btn-glow {
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 6px 30px rgba(0, 102, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 245, 255, 0.2);
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.active {
+    max-height: 500px;
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #0066FF;
+    outline-offset: 2px;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Prevent text selection on buttons and interactive elements */
+button, .glass-card {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Print Styles */
+@media print {
+    nav, footer, .particle-canvas {
+        display: none;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+}
