@@ -34,16 +34,20 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
+    will-change: transform;
 }
 
 /* Glass Card Effects */
 .glass-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(5, 10, 30, 0.95);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 245, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    opacity: 1 !important; /* Prevents opacity changes during scroll animations */
+    position: relative;
+    z-index: 10;
 }
 
 .glass-card:hover {
@@ -80,7 +84,8 @@ body {
 /* Section Positioning */
 section {
     position: relative;
-    z-index: 10;
+    z-index: 1;
+    overflow: hidden;
 }
 
 /* Custom Animations */
